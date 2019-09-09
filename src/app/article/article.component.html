@@ -1,0 +1,42 @@
+<div class="article">
+  <div class="article__wrap">
+    <app-breadcrumbs-bar></app-breadcrumbs-bar>
+    <div *ngIf="article">
+      <h3 class="article__txt article__txt--title">{{article[('content'|translate)].title }}</h3>
+      <h4 class="article__txt article__txt--description">{{article[('content'|translate)].description }}</h4>
+      <img class="article__img" src="assets/img/article{{article.id}}.png" alt="">
+      <p class="article__txt article__txt--content">{{article[('content'|translate)].content}}</p>
+    </div>
+  </div>
+  <div class="article__popular">
+    <h4 class="article__wrap article__head article__head--lrg">Популярные статьи </h4>
+    <div class="article__wrap article__row article__row--outer">
+      <div class="article__col6 article__col6--outer">
+        <div class="article__row">
+          <div class="article__col6">
+            <img src="assets/img/article1.png" alt="">
+            <div class="article__overlay"></div>
+          </div>
+          <div class="article__col6">
+            <a class="article__head">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+            <p class="article__txt">Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et
+              viverra justo commodo.</p>
+          </div>
+        </div>
+      </div>
+      <div class="article__col6 article__col6--outer">
+        <div class="article__row">
+          <div class="article__col6">
+            <img src="assets/img/article2.png" alt="">
+            <div class="article__overlay"></div>
+          </div>
+          <div class="article__col6">
+            <a class="article__head">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+            <p class="article__txt">Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et
+              viverra justo commodo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

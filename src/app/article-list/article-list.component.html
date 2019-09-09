@@ -1,0 +1,55 @@
+<div class="articles">
+  <div class="articles__wrap">
+    <div (click)='addRemoveRedClass($event)' class="articles__tabs">
+      <div  class="articles__tab articles__tab--active">
+        Все статьи
+      </div>
+      <div  class="articles__tab">
+        Визы
+      </div>
+      <div  class="articles__tab">
+        Советы
+      </div>
+    </div>
+    <div *ngFor="let article of articles; let myIndex = index; let odd = odd">
+      <div *ngIf="!odd" class="articles__row articles__row--outer">
+        <div class="articles__col6">
+          <div class="articles__row">
+            <div class="articles__col6">
+              <img src="assets/img/article{{articles[myIndex].id}}.png" alt="">
+              <div class="articles__overlay"></div>
+            </div>
+            <div class="articles__col6">
+              <a [routerLink]="['/articles', myIndex]"
+                class="articles__head">{{articles[myIndex][('content'|translate)].title }}</a>
+              <p class="articles__txt">{{articles[myIndex][('content'|translate)].description}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="articles__col6 articles__col6--outer">
+          <div class="articles__row">
+            <div class="articles__col6">
+              <img src="assets/img/article{{articles[myIndex+1].id}}.png" alt="">
+              <div class="articles__overlay"></div>
+            </div>
+            <div class="articles__col6">
+              <a [routerLink]="['/articles',  myIndex + 1 ]"
+                class="articles__head">{{articles[myIndex+1][('content'|translate)].title }}</a>
+              <p class="articles__txt">{{articles[myIndex+1][('content'|translate)].description}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="articles__pagination">
+      <a class="articles__page articles__page--active" href="#">1</a>
+      <a class="articles__page" href="#">2</a>
+      <a class="articles__page" href="#">3</a>
+      <a class="articles__page" href="#">4</a>
+      <a class="articles__page" href="#">5</a>
+      <p class="articles__page">...</p>
+      <a class="articles__page" href="#">17</a>
+    </div>
+  </div>
+</div>
+

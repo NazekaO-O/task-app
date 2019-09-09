@@ -1,0 +1,146 @@
+.article{
+  &__wrap{
+    width: 1280px;
+    margin: auto;
+  }
+  &__txt{
+    font-family: 'OpenSans';
+    color: #333333;
+    &--title{
+      font-size: 30px;
+      font-weight: 200;
+      margin: 25px 0 45px;
+    }
+    &--description{
+      margin: 0 0 45px;
+      font-size: 20px;
+      font-weight: 300;
+    }
+    &--content{
+      margin: 60px 0 30px;
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
+  &__popular{
+    background: #f1f5f6;
+    margin: 70px 0 0;
+    padding: 95px 0 100px;
+  }
+  &__overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($color: #2095f3, $alpha: 0.3)
+  }
+  &__head{
+    font-family: 'OpenSans';
+    font-size: 18px;
+    font-weight: 300;
+    color: #333333;
+    margin:0 auto 30px;
+    display: block;
+    &--lrg{
+      font-size: 30px;
+      margin:0 auto 45px;
+    }
+  }
+  &__txt{
+    color: #a1a8b8;
+    font-family: 'OpenSans';
+    font-size: 16px;
+    font-weight: 300;
+  }
+  &__img{
+    // width: 70%;
+    margin: auto;
+    display: block;
+  }
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    &--outer{
+      margin-bottom: 50px;
+    }
+  }
+  &__col6{
+    width: 49%;
+    position: relative;
+    img{
+      display: block;
+      width: 100%;
+    }
+    &:last-of-type{
+      padding-left: 20px;
+    }
+  }
+  &__head{
+    font-family: 'OpenSans';
+    color: #333333;
+  }
+}
+@media screen
+and (max-width: 1280px)
+and (-webkit-min-device-pixel-ratio: 1){
+  .article{
+    &__wrap{
+      width: 1200px;
+    }
+  }
+}
+@media screen
+and (max-width: 1199px)
+and (-webkit-min-device-pixel-ratio: 1){
+  .article{
+    &__wrap{
+      width: 90%;
+    }
+    &__row{
+      &--outer{
+        display: block;
+      }
+
+    }
+    &__col6{
+      width: fit-content;
+      &:not(:last-of-type){
+        margin-bottom: 30px;
+      }
+      &--outer{
+        &:last-of-type{
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
+@media screen
+and (max-width: 760px)
+and (-webkit-min-device-pixel-ratio: 1){
+  .article{
+    &__wrap{
+      width: 90%;
+    }
+  }
+}
+/*600*/
+@media screen
+and (max-width: 699px)
+and (-webkit-min-device-pixel-ratio: 1){
+  .article{
+    &__row{
+      display: block;
+    }
+    &__col6{
+      width: 100%;
+      &:last-of-type{
+        padding: 0;
+      }
+    }
+    &__popular{
+      padding: 55px 0 80px;
+    }
+  }
+}
